@@ -1,0 +1,2 @@
+# LectureRecorder
+Transcribes/Summarizes Lectures
