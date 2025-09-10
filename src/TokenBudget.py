@@ -1,3 +1,6 @@
+import torch
+from transformers import LogitsProcessor
+
 # https://muellerzr.github.io/til/end_thinking.html
 class ThinkingTokenBudgetProcessor(LogitsProcessor):
     """

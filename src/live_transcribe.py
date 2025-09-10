@@ -3,12 +3,12 @@ import numpy as np
 import queue
 import torch
 
+from TokenBudget import ThinkingTokenBudgetProcessor
+
 from vllm import LLM, SamplingParams
 from copy import deepcopy
 from faster_whisper import WhisperModel
 from transformers import pipeline, BitsAndBytesConfig, AutoModelForCausalLM, AutoTokenizer
-from transformers import LogitsProcessor
-
 # ====== CONFIG ======
 SAMPLE_RATE = 16000
 CHUNK_DURATION = 5    # seconds per processing chunk
