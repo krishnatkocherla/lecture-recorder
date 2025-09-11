@@ -18,8 +18,6 @@ MODEL_SIZE = "large-v2"   # faster-whisper model: tiny, base, small, medium, lar
 # Load models
 print("Loading Faster-Whisper model...")
 whisper_model = WhisperModel(MODEL_SIZE, device="cuda", compute_type="float16")
-# print("Loading summarizer...")
-# summarizer = pipeline("summarization", model="facebook/bart-large-cnn")
 
 def truncate_length(prompt, tokenizer):
     temp = tokenizer.encode(prompt)
@@ -73,16 +71,6 @@ def record_and_transcribe():
                     if chunk_text:
                         transcript_history += " " + chunk_text
                         print(f"\n[Transcript] {chunk_text}")
-
-                        # Summarize periodically
-                        # if len(transcript_history.split()) > 30:
-                        #     summary = summarizer(
-                        #         transcript_history,
-                        #         max_length=60,
-                        #         min_length=10,
-                        #         do_sample=False
-                        #     )[0]['summary_text']
-                        #     print(f"[Summary] {summary}")
 
     except KeyboardInterrupt:
         print("\n🛑 Stopped recording.")
