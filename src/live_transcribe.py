@@ -73,7 +73,7 @@ def record_and_transcribe():
                         print(f"\n[Transcript] {chunk_text}")
 
     except KeyboardInterrupt:
-        print("\n🛑 Stopped recording.")
+        print("\n🛑 Stopped recording the lecture.")
 
 if __name__ == "__main__":
     record_and_transcribe()
