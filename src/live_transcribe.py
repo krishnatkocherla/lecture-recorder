@@ -11,7 +11,7 @@ from faster_whisper import WhisperModel
 from transformers import pipeline, BitsAndBytesConfig, AutoModelForCausalLM, AutoTokenizer
 # ====== CONFIG ======
 SAMPLE_RATE = 16000
-CHUNK_DURATION = 5    # seconds per processing chunk
+CHUNK_DURATION = 30    # seconds per processing chunk
 MODEL_SIZE = "large-v2"   # faster-whisper model: tiny, base, small, medium, large-v2
 # ====================
 
